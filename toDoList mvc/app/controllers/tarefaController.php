@@ -8,6 +8,11 @@
             $this->tarefaModel = new Tarefa();
         }
 
+        public function index() {
+            $tarefas = $this->tarefaModel->listar();
+            include __DIR__ .'/../views/listar.php';
+    }        
+
         public function criar() {
             if (isset($_POST['descricao']) && !empty(($_POST['descricao']))) {
                 $this->tarefaModel->criar($_POST['descricao']);
