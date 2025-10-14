@@ -1,5 +1,5 @@
 <?php 
-    require_once __DIR__ ."/app/controllers/TarefaController.php";
+    require_once __DIR__ ."/app/controllers/tarefaController.php";
 
     $controller = new TarefaController();
 
@@ -11,6 +11,7 @@
             break;
         case 'excluir':
                 $controller->excluir();
+            break;
         default:
                 $controller->index();
             break;
