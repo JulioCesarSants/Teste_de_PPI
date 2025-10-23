@@ -1,21 +1,21 @@
 <?php 
-    class Database {
-        private $host =  "localhost";
-        private $username = "root";
-        private $password = "";
-        private $database = "to_do_list";
 
-        public $conn;
+class Database{
 
-        public function conectar(): mysqli {
-            $this->conn = new mysqli($this->host, $this->username, $this->password, $this->database);
+    private $host = "localhost"; 
+    private $usario = "root"; 
+    private $senha = ""; 
+    private $banco = "to_do_list"; 
+    public $conn; 
 
-            if ($this->conn->connect_error) {
-                die("Deu erro: ". $this->conn->connect_error);
-        }    
+    public function conectar(){
+        $this->conn = new mysqli($this->host, $this->usario, $this->senha, $this->banco); 
+        if($this->conn->connect_error){
+            die ("Algo deu errado com a conexão" . $this->conn->connect_error); 
+        }
 
-        return $this->conn;
+        return $this->conn; 
     }
-}    
 
+}
 ?>
