@@ -13,8 +13,8 @@ include('protect.php');
 </head>
 <body>
     Bem vindo ao painel, <?php echo $_SESSION['nome']?>
-</body>
-<p>
+    <p>
     <a href="logout.php">Sair</a>
 </p>
+</body>
 </html>
