@@ -10,8 +10,8 @@
             $email = $mysqli->real_escape_string($_POST['email']);
             $senha = $mysqli->real_escape_string($_POST['senha']);
 
-            $sqlSelect = "SELECT * FROM usuarios WHERE email = $email AND senha = $senha";
-            $lista_usuarios = $mysqli->query($sqlSelect);
+            $sql = "SELECT * FROM usuarios WHERE email = '$email' AND senha = '$senha'";
+            $lista_usuarios = $mysqli->query($sql);
             $quantidade = $lista_usuarios->num_rows;
 
             if ($quantidade == 1) {
